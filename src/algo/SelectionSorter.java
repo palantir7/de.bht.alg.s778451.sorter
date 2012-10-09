@@ -40,9 +40,9 @@ public class SelectionSorter {
         selectionSort(array);
 
         final long timeEnd = System.nanoTime();
-        SelectionSorter.time = ((Math.round((timeEnd - timeStart) / 1000)) / 1000);
+        SelectionSorter.time = timeEnd - timeStart;
 
-        Console.textBuffer = Console.textBuffer + "\n\n Laufzeit: " + SelectionSorter.time + "\n";
+        Console.textBuffer = Console.textBuffer + "\n\n Laufzeit: " + SelectionSorter.time + " ns\n";
 
         return this.unsorted;
     }

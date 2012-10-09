@@ -279,6 +279,7 @@ public class JFrame extends javax.swing.JFrame {
 		Console.textBuffer = "";
 		
 		int[] buffer = null;
+                int modifyer = 1000000;
 
 		array_counter.setText("" + FileIntArray.lenght);
 
@@ -286,7 +287,7 @@ public class JFrame extends javax.swing.JFrame {
 			MergeSorter m = new MergeSorter();
 			buffer = m.sort(loaded);
 
-			double time = MergeSorter.time;
+			double time = MergeSorter.time / modifyer;
 			array_time.setText("" + time + " ms");
 		}
 
@@ -294,7 +295,7 @@ public class JFrame extends javax.swing.JFrame {
 			QuickSorter m = new QuickSorter();
 			buffer = m.sort(loaded);
 
-			double time = QuickSorter.time;
+			double time = QuickSorter.time / modifyer;
 			array_time.setText("" + time + " ms");
 		}
 
@@ -302,7 +303,7 @@ public class JFrame extends javax.swing.JFrame {
 			HeapSorter m = new HeapSorter();
 			buffer = m.sort(loaded);
 
-			double time = HeapSorter.time;
+			double time = HeapSorter.time / modifyer;
 			array_time.setText("" + time + " ms");
 		}
 
@@ -310,7 +311,7 @@ public class JFrame extends javax.swing.JFrame {
 			SelectionSorter m = new SelectionSorter();
 			buffer = m.sort(loaded);
 
-			double time = SelectionSorter.time;
+			double time = SelectionSorter.time / modifyer;
 			array_time.setText("" + time + " ms");
 		}
 
@@ -318,7 +319,7 @@ public class JFrame extends javax.swing.JFrame {
 			InsertionSorter m = new InsertionSorter();
 			buffer = m.sort(loaded);
 
-			double time = InsertionSorter.time;
+			double time = InsertionSorter.time / modifyer;
 			array_time.setText("" + time + " ms");
 		}
 

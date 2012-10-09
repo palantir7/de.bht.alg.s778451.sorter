@@ -39,9 +39,9 @@ public class HeapSorter {
         heapsort();
 
         final long timeEnd = System.nanoTime();
-        HeapSorter.time = ((Math.round((timeEnd - timeStart) / 1000)) / 1000);
+        HeapSorter.time = timeEnd - timeStart;
 
-        Console.textBuffer = Console.textBuffer + "\n\n Laufzeit: " + HeapSorter.time + "\n";
+        Console.textBuffer = Console.textBuffer + "\n\n Laufzeit: " + HeapSorter.time + " ns\n";
 
         return this.unsorted;
     }

@@ -44,9 +44,9 @@ public class MergeSorter {
         mergesort(0, n - 1);
 
         final long timeEnd = System.nanoTime();
-        MergeSorter.time = ((Math.round((timeEnd - timeStart) / 1000)) / 1000);
+        MergeSorter.time = timeEnd - timeStart;
 
-        Console.textBuffer = Console.textBuffer + "\n\n Laufzeit: " + MergeSorter.time + "\n";
+        Console.textBuffer = Console.textBuffer + "\n\n Laufzeit: " + MergeSorter.time + " ns\n";
 
         return this.unsorted;
     }

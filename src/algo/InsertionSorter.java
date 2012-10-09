@@ -71,8 +71,8 @@ public class InsertionSorter {
 
         final long timeEnd = System.nanoTime();
 
-        InsertionSorter.time = ((Math.round((timeEnd - timeStart) / 1000)) / 1000);
+        InsertionSorter.time = timeEnd - timeStart;
 
-        Console.textBuffer = Console.textBuffer + "\n\n Laufzeit: " + InsertionSorter.time + "\n";
+        Console.textBuffer = Console.textBuffer + "\n\n Laufzeit: " + InsertionSorter.time + " ns\n";
     }
 }

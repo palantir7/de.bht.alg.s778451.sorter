@@ -39,9 +39,9 @@ public class QuickSorter {
         quicksort(0, n - 1);
 
         final long timeEnd = System.nanoTime();
-        QuickSorter.time = ((Math.round((timeEnd - timeStart) / 1000)) / 1000);
+        QuickSorter.time = timeEnd - timeStart;
 
-        Console.textBuffer = Console.textBuffer + "\n\n Laufzeit: " + QuickSorter.time + "\n";
+        Console.textBuffer = Console.textBuffer + "\n\n Laufzeit: " + QuickSorter.time + " ns\n";
 
         return this.unsorted;
     }
